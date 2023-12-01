@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz</title>
+</head>
+
+<body>
+
+    <h1>Meses e Suas Abreviações - Questão 2</h1>
+    <font size="9" id="retorno1"></font> <br><br>
+    <script>
+        let calendario = [
+            ["Janeiro", "Jan", "January"],
+            ["Fevereiro", "Fev", "February"],
+            ["Março", 'Mar', 'March'],
+            ["Abril", "Abr", "April"],
+            ["Maio", 'Maio', 'May'],
+            ['Junho', 'Jun', 'June'],
+            ['Julho', 'Jul', 'July'],
+            ['Agosto', 'Ago', 'August'],
+            ['Setembro', 'Set', 'September'],
+            ['Outubro', 'Out', 'October'],
+            ['Novembro', 'Nov', 'November'],
+            ['Dezembro', 'Dez', 'December']
+        ];
+
+        let opcao = prompt('Digite um número de um a doze para receber o mês equivalente');
+        switch (true) {
+            case opcao <= 12 || opcao > 0:
+                opcao--
+                document.getElementById("retorno1").innerHTML = calendario[opcao][0] + " " + calendario[opcao][1] + " " + calendario[opcao][2] + "</br>"
+                break;
+            default:
+                alert("Digite um valor de 1 a 12")
+                opcao = prompt('Digite um número de um a doze para receber o mês equivalente')
+                break;
+        }
+
+
+        for (let linhas = 0; linhas < 12; linhas++) {
+            for (let colunas = 0; colunas < 3; colunas++) {
+                document.write (calendario[linhas][colunas] + " ");
+            }
+            
+            document.write("</br>");
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
