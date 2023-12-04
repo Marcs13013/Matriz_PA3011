@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matriz</title>
 </head>
+
 <body>
- 
+
     <script>
         let matriz = [
-                      [20,30,40,50,60], 
-                      [21,31,41,51,61],
-                      [22,32,42,52,62],
-                      [23,33,43,53,63]
-                      
-                    ];
- 
-                    let somaLinha = 0;
-                    let somaColuna = 0;
- 
-        for (let linhas = 0; linhas < 4; linhas++) {
+            [20, 30, 40, 50, 60],
+            [21, 31, 41, 51, 61],
+            [22, 32, 42, 52, 62],
+            [23, 33, 43, 53, 63]
+
+        ];
+
+        let somaLinha = 0;
+        let somaColuna = 0;
+
+        for (let linhas = 0; linhas < matriz.length; linhas++) {
             for (let colunas = 0; colunas < 5; colunas++) {
-               somaLinha += matriz[linhas][colunas];
-             document.write(matriz[linhas][colunas]+ "  ");
-           
+                somaLinha += matriz[linhas][colunas];
+                somaColuna += matriz[linhas][colunas];
+                document.write(matriz[linhas][colunas] + "  ");
+
             }
-            
-            document.write("Soma das linhas" + somaLinha + "<br/>");
-           
-            document.write("Soma das colunas" + somaColuna + "<br/>");
-            
- 
+            somaLinha = 0
+            somaColuna = 0
+            document.write("<br/>");
         }
- 
-          
- 
-       
+        
+        document.write('</br>')
+        //somar as linhas
+         for (let linha = 0; linha < matriz.length; linha++) {
+            for (let coluna = 0; coluna < 5; coluna++) {
+                somaLinha += (matriz[linha][coluna])
+            }
+            document.write("Soma da linha" + linha + ": " + somaLinha + "<br/>")
+            somaLinha = 0;
+        }
+        
+        document.write('</br>')
+      
+        //somar as colunas
+        for (let coluna = 0; coluna <5 ; coluna++) {
+            for (let linha = 0; linha < matriz.length; linha++) {
+                somaColuna += (matriz[linha][coluna])
+            }
+            document.write("Soma da coluna" + coluna + ": " + somaColuna + "<br/>")
+            somaColuna = 0;
+        }
     </script>
 </body>
+
 </html>
