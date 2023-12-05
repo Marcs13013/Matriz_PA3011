@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matriz</title>
+    <title>Batalha Naval</title>
 </head>
 
 <body>
-
     <script>
         let batalhaNaval = [
             [1, 2, 3, 4, 5],
@@ -23,151 +22,56 @@
             [46, 47, 48, 49, 50]
         ];
 
-
-        let contadorJ1 = 0
-        let contadorJ2 = 0
-        let jogador1 = alert("Jogador 1, escolha as posições onde os 10 navios serão colocados");
-        let j1barco1V = prompt("Escolha a posição  vertical onde será colocado o barco 1");
-        let j1barco1H = prompt("Escolha a posição  horizontal onde será colocado o barco 1");
-        let j1barco2V = prompt("Escolha a posição  vertical onde será colocado o barco 2");
-        let j1barco2H = prompt("Escolha a posição  horizontal onde será colocado o barco 2");
-        let j1barco3V = prompt("Escolha a posição  vertical onde será colocado o barco 3");
-        let j1barco3H = prompt("Escolha a posição  horizontal onde será colocado o barco 3");
-        let j1barco4V = prompt("Escolha a posição  vertical onde será colocado o barco 4");
-        let j1barco4H = prompt("Escolha a posição  horizontal onde será colocado o barco 4");
-        let j1barco5V = prompt("Escolha a posição  vertical onde será colocado o barco 5");
-        let j1barco5H = prompt("Escolha a posição  horizontal onde será colocado o barco 5");
-        let j1barco6V = prompt("Escolha a posição  vertical onde será colocado o barco 6");
-        let j1barco6H = prompt("Escolha a posição  horizontal onde será colocado o barco 6");
-        let j1barco7V = prompt("Escolha a posição  vertical onde será colocado o barco 7");
-        let j1barco7H = prompt("Escolha a posição  horizontal onde será colocado o barco 7");
-        let j1barco8V = prompt("Escolha a posição  vertical onde será colocado o barco 8");
-        let j1barco8H = prompt("Escolha a posição  horizontal onde será colocado o barco 8");
-        let j1barco9V = prompt("Escolha a posição  vertical onde será colocado o barco 9");
-        let j1barco9H = prompt("Escolha a posição  horizontal onde será colocado o barco 9");
-        let j1barco10V = prompt("Escolha a posição  vertical onde será colocado o barco 10");
-        let j1barco10H = prompt("Escolha a posição  horizontal onde será colocado o barco 10");
-
-        let position1 = batalhaNaval[j1barco1H][j1barco1V];
-        let position2 = batalhaNaval[j1barco2H][j1barco2V];
-        let position3 = batalhaNaval[j1barco3H][j1barco3V];
-        let position4 = batalhaNaval[j1barco4H][j1barco4V];
-        let position5 = batalhaNaval[j1barco5H][j1barco5V];
-        let position6 = batalhaNaval[j1barco6H][j1barco6V];
-        let position7 = batalhaNaval[j1barco7H][j1barco7V];
-        let position8 = batalhaNaval[j1barco8H][j1barco8V];
-        let position9 = batalhaNaval[j1barco9H][j1barco9V];
-        let position10 = batalhaNaval[j1barco10H][j1barco10V];
-
-
-        let jogador2 = alert("Agora o jogador 2 vai escolher onde será colocadas as 10 bombas para pontuar");
-        let j2bomba1V = prompt("Escolha a posição vertical onde será colocado o bomba 1");
-        let j2bomba1H = prompt("Escolha a posição horizontal onde será colocado o bomba 1");
-        let j2bomba2V = prompt("Escolha a posição vertical onde será colocado o bomba 2");
-        let j2bomba2H = prompt("Escolha a posição horizontal onde será colocado o bomba 2");
-        let j2bomba3V = prompt("Escolha a posição vertical onde será colocado o bomba 3");
-        let j2bomba3H = prompt("Escolha a posição horizontal onde será colocado o bomba 3");
-        let j2bomba4V = prompt("Escolha a posição vertical onde será colocado o bomba 4");
-        let j2bomba4H = prompt("Escolha a posição horizontal onde será colocado o bomba 4");
-        let j2bomba5V = prompt("Escolha a posição vertical onde será colocado o bomba 5");
-        let j2bomba5H = prompt("Escolha a posição horizontal onde será colocado o bomba 5");
-        let j2bomba6V = prompt("Escolha a posição vertical onde será colocado o bomba 6");
-        let j2bomba6H = prompt("Escolha a posição horizontal onde será colocado o bomba 6");
-        let j2bomba7V = prompt("Escolha a posição vertical onde será colocado o bomba 7");
-        let j2bomba7H = prompt("Escolha a posição horizontal onde será colocado o bomba 7");
-        let j2bomba8V = prompt("Escolha a posição vertical onde será colocado o bomba 8");
-        let j2bomba8H = prompt("Escolha a posição horizontal onde será colocado o bomba 8");
-        let j2bomba9V = prompt("Escolha a posição vertical onde será colocado o bomba 9");
-        let j2bomba9H = prompt("Escolha a posição horizontal onde será colocado o bomba 9");
-        let j2bomba10V = prompt("Escolha a posição vertical onde será colocado o bomba 10");
-        let j2bomba10H = prompt("Escolha a posição horizontal onde será colocado o bomba 10");
-
-        let positionB1 = batalhaNaval[j2bomba1H][j2bomba1V];
-        let positionB2 = batalhaNaval[j2bomba2H][j2bomba2V];
-        let positionB3 = batalhaNaval[j2bomba3H][j2bomba3V];
-        let positionB4 = batalhaNaval[j2bomba4H][j2bomba4V];
-        let positionB5 = batalhaNaval[j2bomba5H][j2bomba5V];
-        let positionB6 = batalhaNaval[j2bomba6H][j2bomba6V];
-        let positionB7 = batalhaNaval[j2bomba7H][j2bomba7V];
-        let positionB8 = batalhaNaval[j2bomba8H][j2bomba8V];
-        let positionB9 = batalhaNaval[j2bomba9H][j2bomba9V];
-        let positionB10 = batalhaNaval[j2bomba10H][j2bomba10V];
-
-        switch (true) {
-            case position1 == positionB1:
-                contadorJ1 += 70
-                break;
-            case position2 == positionB2:
-                contadorJ1 += 70
-                break;
-            case position3 == positionB3:
-                contadorJ1 += 70
-                break;
-            case position4 == positionB4:
-                contadorJ1 += 70
-                break;
-            case position5 == positionB5:
-                contadorJ1 += 70
-            case position6 == positionB6:
-                contadorJ1 += 70
-                break;
-            case position7 == positionB7:
-                contadorJ1 += 70
-                break;
-            case position8 == positionB8:
-                contadorJ1 += 70
-                break;
-            case position9 == positionB9:
-                contadorJ1 += 70
-                break;
-            case position10 == positionB10:
-                contadorJ1 += 70
-                break;
-
-            default:
-                break;
+        let pontuacaoJ1 = 0;
+        let pontuacaoJ2 = 0;
+        Num1 = 70
+        Num2 = 100
+        // Jogador 1 posiciona os navios
+        alert("Jogador 1, escolha as posições onde os 10 navios serão colocados");
+        let posicoesJ1Navios = [];
+        for (let i = 0; i < 10; i++) {
+            let v = parseInt(prompt("Escolha a posição vertical do navio " + (i + 1)));
+            let h = parseInt(prompt("Escolha a posição horizontal do navio " + (i + 1)));
+            posicoesJ1Navios.push([h, v]);
         }
 
-        switch (true) {
-            case positionB1 == position1:
-                contadorJ2 += 100
-                break;
-            case positionB2 == position2:
-                contadorJ2 += 100
-                break;
-            case positionB3 == position3:
-                contadorJ2 += 100
-                break;
-            case positionB4 == position4:
-                contadorJ2 += 100
-                break;
-            case positionB5 == position5:
-                contadorJ2 += 100
-                break;
-            case positionB6 == position6:
-                contadorJ2 += 100
-                break;
-            case positionB7 == position7:
-                contadorJ2 += 100
-                break;
-            case positionB8 == position8:
-                contadorJ2 += 100
-                break;
-            case positionB9 == position9:
-                contadorJ2 += 100
-                break;
-            case positionB10 == position10:
-                contadorJ2 += 100
-                break;
-
-            default:
-                break;
+        // Jogador 2 lança as bombas
+        alert("Agora o jogador 2 vai escolher onde serão colocadas as 10 bombas para pontuar");
+        let posicoesJ2Bombas = [];
+        for (let i = 0; i < 10; i++) {
+            let v = parseInt(prompt("Escolha a posição vertical para a bomba " + (i + 1)));
+            let h = parseInt(prompt("Escolha a posição horizontal para a bomba " + (i + 1)));
+            posicoesJ2Bombas.push([h, v]);
         }
 
+        // Verifica os acertos
+        for (let i = 0; i < posicoesJ2Bombas.length; i++) {
+            let bombaX = posicoesJ2Bombas[i][0];
+            let bombaY = posicoesJ2Bombas[i][1];
 
-        document.write("O jogador 1 fez " + contadorJ1 + " pontos</br>")
-        document.write("O jogador 2 fez " + contadorJ2 + " pontos")
+            for (let j = 0; j < posicoesJ1Navios.length; j++) {
+                let navioX = posicoesJ1Navios[j][0];
+                let navioY = posicoesJ1Navios[j][1];
 
+                if (bombaX === navioX && bombaY === navioY) {
+                    pontuacaoJ2 = pontuacaoJ2 + Num2;
+                    // Você pode querer marcar este acerto ou fazer algo para representar visualmente o acerto
+                } else {
+                    pontuacaoJ1 = pontuacaoJ1 + Num1
+                }
+            }
+        }
+
+        // Exibe os pontos e a grade de batalha
+        document.write("<p>O jogador 1 fez " + pontuacaoJ1 + " pontos</p>");
+        document.write("<p>O jogador 2 fez " + pontuacaoJ2 + " pontos </p>");
+
+        for (let linhas = 0; linhas < 10; linhas++) {
+            for (let colunas = 0; colunas < 5; colunas++) {
+                document.write(batalhaNaval[linhas][colunas] + " ");
+            }
+            document.write("<br>");
+        }
     </script>
 </body>
 
